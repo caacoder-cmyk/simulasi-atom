@@ -1849,3 +1849,20 @@ body {
 body {
   min-height: 100vh;
 }
+.social-icons {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.social-icons a {
+  font-size: 26px;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffd1dc;
+  transform: translateY(-4px);
+}
+
