@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <!-- 🔥 INI YANG TADI HILANG -->
+  <body class="dashboard-body">
+    <div class="dashboard-wrapper">
+      <!-- HERO -->
+      <div class="hero">
+        <!-- KARTUN -->
+        <img src="../assets/Doctor.png" class="hero-img" />
+
+        <!-- AWAN -->
+        <div class="hero-cloud">
+          <h2 id="welcomeUser"></h2>
+          <h1>Welcome Explorer ⚛️</h1>
+          <p>Yuk belajar kimia seru bareng!</p>
+        </div>
+      </div>
+
+      <!-- CARD -->
+      <div class="card-container">
+        <div class="card blue">
+          <img src="../assets/atomateri.png" class="card-img" />
+          <h3>Pertemuan 1</h3>
+          <button onclick="bukaMateri(1)">Mulai Belajar →</button>
+        </div>
+
+        <div class="card green">
+          <img src="../assets/Elektronmateri.png" class="card-img" />
+          <h3>Pertemuan 2</h3>
+          <button onclick="bukaMateri(2)">Mulai Belajar →</button>
+        </div>
+
+        <div class="card purple">
+          <img src="../assets/molekulmateri.png" class="card-img" />
+          <h3>Pertemuan 3</h3>
+          <button onclick="bukaMateri(3)">Mulai Belajar →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="../js/app.js"></script>
+
+    <!-- ANIMASI -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const wrap = document.querySelector(".dashboard-wrapper");
+        wrap.style.opacity = 0;
+        wrap.style.transform = "translateY(20px)";
+
+        setTimeout(() => {
+          wrap.style.transition = "0.6s";
+          wrap.style.opacity = 1;
+          wrap.style.transform = "translateY(0)";
+        }, 100);
+      });
+    </script>
+  </body>
+</html>

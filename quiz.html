@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body class="quiz-body">
+    <!-- BACK -->
+    <button onclick="window.location.href = 'dashboard.html'" class="back-btn">
+      ← Dashboard
+    </button>
+
+    <div class="quiz-box">
+      <!-- SOAL -->
+      <p id="soal">Loading...</p>
+
+      <p id="clue"></p>
+
+      <div id="pilihan"></div>
+
+      <br />
+
+      <button onclick="nextSoal()" class="submit-btn">Next</button>
+    </div>
+    <!-- ✅ INI WAJIB -->
+
+    <!-- ANIMASI -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const box = document.querySelector(".quiz-box");
+
+        box.style.opacity = 0;
+        box.style.transform = "scale(0.95)";
+
+        setTimeout(() => {
+          box.style.transition = "0.4s";
+          box.style.opacity = 1;
+          box.style.transform = "scale(1)";
+        }, 100);
+      });
+    </script>
+
+    <script src="../js/app.js"></script>
+  </body>
+</html>
